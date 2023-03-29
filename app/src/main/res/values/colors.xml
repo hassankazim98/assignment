@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ciecleborder">#C07E80</color>
+    <color name="next_button">#E84C4F</color>
+    <color name="first_header">#BD7F5B</color>
+    <color name="second_header">#79113E</color>
+     <color name="grey_dark">#a1a1a1</color>
+    <color name="headertwo">#5E413E</color>
+    <color name="headerone">@color/circle_color</color>
+    <color name="circle_color">#3F4462</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#808080</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_700">#616161</color> <!--same for closed order status color-->
+    <color name="grey_600">#757575</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="dark_text_color">#000000</color>
+    <color name="category_background">#9f9f9f</color>
+
+    <color name="gray_unselect_qc_cart">#2D2E35</color>
+    <color name="titleColor">#2C2C2C</color>
+    <color name="descriptionColor">#929CA3</color>
+    <color name="primary">#0362aa</color>  <!--008CFF-->
+    <color name="primary_light">#0480E4</color>
+    <color name="primary_variant">#008ba3</color>
+    <color name="colorPrimaryDark">#0362aa</color>
+    <color name="secondary">#26c6da</color>
+
+    <color name="product_image_placeholder_color">#E1E1E1</color>
+    <color name="item_value_text_color">#545353</color>
+    <color name="white_color_shade1">#F8F8F8</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="light_gray_new">#EDECEC</color>
+    <color name="dashboard_item_details_bg">#F3F3F3</color>
+    <string name="checkout_lbl_selected_address">Selected Address</string>
+    <color name="color_dim_gray">#696969</color>
+
+    <color name="white_bg">#F5FFFA</color>
+    <color name="peach">#FF6F5E</color>
+    <color name="green">#5DF663</color>
+    <color name="red">#FF1313</color>
+    <color name="light_blue">#B9DEFB</color>
+
+    <color name="detail_tab_bg_color">#FEF6EC</color>
+    <color name="miqtextcolor">#DB7D32</color>
+    <color name="app_theme_color">#546122</color>
+    <color name="status_bar_color">#4E5C29</color>
+    <color name="search_textbox">#C8A27B</color>
+</resources>

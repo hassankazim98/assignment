@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.widget.TextView" />
+        <import type="java.util.List" />
+        <variable
+            name="viewmodel"
+            type="com.assignment.eshop.ui.search.SearchViewModel" />
+        <variable
+            name="listner"
+            type="com.assignment.eshop.ui.search.SearchFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/titleColor"
+            android:layout_centerInParent="true"
+             />
+        <!--android:text="@{viewmodel.searchList.message}"-->
+        <!--android:visibility="@{viewmodel.searchList.size() == 0 ? View.VISIBLE : View.GONE}"-->
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="@{viewmodel.isViewLoading ? View.GONE : View.VISIBLE}"
+            tools:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/search_home_background"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                android:visibility="@{viewmodel.searchText.length() == 0 ? View.GONE : View.VISIBLE}">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_toStartOf="@+id/viewSearch"
+                    android:background="@null"
+                    android:fontFamily="@font/robotoregular"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="@={listner.searchData}"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/_14ssp" />
+
+                <View
+                    android:id="@+id/viewSearch"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/edtSearch"
+                    android:background="@color/search_textbox" />
+
+                <ImageView
+                    android:id="@+id/edtSearch"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{()-> listner.makeAPIcall()}"
+                    android:src="@drawable/ic_action_name" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:text="@string/search_result"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/_20ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/adapter_product_list" />
+            <!--bindSearchList="@{viewmodel.searchList}"
+            bindSearchListner="@{listner}"-->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</layout>

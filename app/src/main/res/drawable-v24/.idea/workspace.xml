@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6f4bf0f-ccd3-4e49-ae63-f8e5579ff0d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/data/db/dao/NamazDetailsDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/data/db/table/NamazDetails.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/data/repository/NamazDetailsRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/ui/namazdetails/NamazDetailsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/ui/namazdetails/NamazDetailsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bg_cardview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/bg_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/bg_circle_full.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/bg_next_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_namaz_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/databases/namaz.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/databases/namaz.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/data/db/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/data/db/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/data/repository/HomeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/data/repository/HomeRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/di/ActivityBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/di/ActivityBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/di/AppModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/di/AppModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/ui/home/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/ui/home/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/ui/home/HomeActivityViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/ui/home/HomeActivityViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/utils/Constant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/utils/Constant.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/utils/GlobalMethods.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/utils/GlobalMethods.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/namazapp/utils/NavigationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/namazapp/utils/NavigationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1lDyjBeU0xwzGNq4i0k1SB4INgF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6f4bf0f-ccd3-4e49-ae63-f8e5579ff0d0" name="Default Changelist" comment="" />
+      <created>1607146088710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607146088710</updated>
+    </task>
+    <servers />
+  </component>
+</project>

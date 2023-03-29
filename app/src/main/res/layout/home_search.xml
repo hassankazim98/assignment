@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="listner"
+            type="com.assignment.eshop.ui.home.fragments.HomeFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/search_home_background"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toStartOf="@+id/viewSearch"
+                android:background="@null"
+                android:fontFamily="@font/robotoregular"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="@dimen/_10sdp"
+
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/_14ssp" />
+            <!--android:text="@={listner.strSearchData}"-->
+            <View
+                android:id="@+id/viewSearch"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_toStartOf="@+id/edtSearch"
+                android:background="@color/search_textbox" />
+
+            <ImageView
+                android:id="@+id/edtSearch"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:onClick="@{()-> listner.openSearchScreen()}"
+                android:src="@drawable/ic_action_name" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

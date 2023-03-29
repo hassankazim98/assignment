@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_inward"
+    app:startDestination="@id/inwardFragment">
+
+    <fragment
+        android:id="@+id/inwardFragment"
+        android:name="com.assignment.eshop.ui.productdetail.ProductDetailsFragment"
+        android:label="Inward"
+        tools:layout="@layout/fragment_inword"/>
+</navigation>

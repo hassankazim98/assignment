@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Eshop</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_with_fb">Sign In with facebook</string>
+    <string name="sign_with_google">Sign In with Google</string>
+    <string name="or">or</string>
+    <string name="email">E-mail</string>
+    <string name="email_hint">name@email</string>
+
+    <string name="password">Password</string>
+    <string name="pass_hint">Forgot Password</string>
+    <string name="sign_next">Sign Up if you havent registered yet</string>
+    <string name="shopping_list">WishList</string>
+    <string name="search_result">SEARCH RESULT</string>
+
+</resources>

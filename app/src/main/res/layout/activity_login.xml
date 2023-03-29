@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewmodel"
+            type="com.assignment.eshop.ui.auth.LoginActivityViewModel" />
+        <variable
+            name="listner"
+            type="com.assignment.eshop.ui.auth.LoginActivity" />
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/detail_tab_bg_color"
+        tools:context=".ui.auth.LoginActivity" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+              <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_15sdp">
+
+                    <TextView
+                        android:id="@+id/Sign_in_Login_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/miqtextcolor"
+                        android:textSize="@dimen/_23ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearlayoutFb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/miqtextcolor"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_fb_login" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/robotoregular"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/sign_with_fb"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/miqtextcolor"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_google" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/robotoregular"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/sign_with_google"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_13sdp"
+                        android:text="@string/or"
+                        android:textColor="@color/miqtextcolor"
+                        android:textSize="@dimen/_20ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="@string/email"
+                            android:textColor="@color/app_theme_color"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_25sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Telephone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp"
+                            android:visibility="gone" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/edittextdesign"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_email_"
+                            app:tint="@color/descriptionColor" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:background="@null"
+                            android:hint="@string/email_hint"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_30sdp"
+                            android:paddingTop="@dimen/_3sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="@dimen/_3sdp"
+                        android:text="@string/password"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/edittextdesign"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_passwrod"
+                            app:tint="@color/descriptionColor" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/pass_hint"
+                            android:inputType="textPassword"
+                            android:paddingLeft="@dimen/_30sdp"
+                            android:paddingTop="@dimen/_3sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/descriptionColor" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="@dimen/_3sdp"
+                        android:text="Forgot Password"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@color/miqtextcolor"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/dont_have_an_ac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/robotoregular"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/miqtextcolor"
+                            android:text="@string/sign_next"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,2 @@
+rootProject.name = "NamazApp"
+include ':app'
