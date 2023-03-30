@@ -7,7 +7,7 @@
         <import type="android.view.View" />
         <variable
             name="productList"
-            type="com.assignment.eshop.data.db.model.ProductListModel" />
+            type="com.assignment.eshop.data.db.model.Product.Meal" />
         <variable
             name="homeListner"
             type="com.assignment.eshop.lisner.HomeListner" />
@@ -48,10 +48,10 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/montserrat_bold"
                     android:maxLines="1"
-                    android:text="@{productList.strMeal}"
+                    android:text="@{productList.strArea}"
                     android:textColor="@color/titleColor"
                     android:textSize="@dimen/_11ssp"
-                    tools:text="3 Partitioned Teak Wood Plate" />
+                    tools:text="Wood Plate" />
 
                 <TextView
                     android:layout_width="@dimen/_160sdp"
@@ -60,7 +60,7 @@
                     android:text="@{`from ` + productList.strCategory}"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_11ssp"
-                    tools:text="from 124,355 IDR" />
+                    tools:text="from 124,355 IND" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                         android:text="@{productList.strTags}"
                         android:textColor="@color/titleColor"
                         android:textSize="@dimen/_11ssp"
-                        tools:text="Bali Curator" />
+                        tools:text="Curator" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/sellerImage"

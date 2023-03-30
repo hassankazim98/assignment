@@ -14,14 +14,13 @@ import javax.inject.Inject
 
 
 class ProductDetailsFragment : BaseBindingFragment<FragmentProductDetailsBinding>(){
-    @Inject
-    lateinit var viewmodel: ProductDetailsViewModel
-    private var binding: FragmentProductDetailsBinding? = null
 
     override fun layoutId(): Int = R.layout.fragment_product_details
 
+    @Inject
+    lateinit var viewmodel: ProductDetailsViewModel
+    private var binding: FragmentProductDetailsBinding? = null
     private val args: ProductDetailsFragmentArgs by navArgs()
-
     private var navController: NavController? = null
     private var productId = ""
 
@@ -40,7 +39,7 @@ class ProductDetailsFragment : BaseBindingFragment<FragmentProductDetailsBinding
 
 
         if (globalMethods.isInternetAvailable(requireActivity())) {
-            viewmodel.callProductDetails(productId)
+            //viewmodel.callProductDetails(productId)
 
         } else {
             requireActivity().toast(Constant.CHECK_INTERNET)

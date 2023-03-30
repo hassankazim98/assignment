@@ -1,13 +1,21 @@
 package com.assignment.eshop.ui.home.fragments
 
+import android.app.Application
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import com.assignment.eshop.MyApp
 import com.assignment.eshop.R
+import com.assignment.eshop.api.RetrofitHelper
+import com.assignment.eshop.api.WebServiceInterface
 import com.assignment.eshop.base.BaseBindingFragment
 import com.assignment.eshop.data.db.model.ProductListModel
+import com.assignment.eshop.data.repository.HomeRepository
 import com.assignment.eshop.databinding.FragmentHomeBinding
 import com.assignment.eshop.lisner.HomeListner
 import com.assignment.eshop.utils.Constant
@@ -39,25 +47,29 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>(), HomeListner {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = view.findNavController()
-        viewModel.onMessageError.observe(viewLifecycleOwner, onMessageErrorObserver)
-        LogM.e("==>data "+viewModel.product.value?.strCategory.toString())
 
-    }
+        val qouts = RetrofitHelper.getInstance().create(WebServiceInterface::class.java)
+        val repository = HomeRepository(qouts)
+        viewModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(HomeViewModel::class.java)
 
-
-    private val onMessageErrorObserver = Observer<Any> {
-        activity?.toast(it.toString())
+        viewModel.products.observe(requireActivity(), Observer {
+            LogM.e("==> is data size "+it.meals.size.toString())
+            LogM.e("==> is data "+it.meals.toString())
+        })
     }
 
     override fun openProductDetails(model: ProductListModel) {
-        val action =
-            HomeFragmentDirections.actionNavigationHomeToProductDetailsFragment(model.idMeal.toString())
-        navController?.navigate(action)
+        /*  val action =
+              HomeFragmentDirections.actionNavigationHomeToProductDetailsFragment(model.idMeal.toString())
+          navController?.navigate(action)*/
     }
     fun openSearchScreen() {
-        if (strSearchData.length > 0) {
+        /*if (strSearchData.length > 0) {
             val action = HomeFragmentDirections.actionGlobalSearchFragment(strSearchData, Constant.kEY_FROM_SEARCH)
             navController?.navigate(action)
-        }
+        }*/
     }
 }
+
+
+

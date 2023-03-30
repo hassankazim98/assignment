@@ -7,6 +7,7 @@ import com.assignment.eshop.MyApp
 import com.assignment.eshop.api.ApiExceptions
 import com.assignment.eshop.api.NoInternetException
 import com.assignment.eshop.data.db.model.ProductListModel
+import com.assignment.eshop.data.repository.ProductDetailsRepository
 import com.assignment.eshop.utils.*
 import com.google.gson.JsonObject
 import org.json.JSONObject
@@ -34,14 +35,13 @@ class ProductDetailsViewModel @Inject constructor(
         Coroutines.main {
             try {
                 val inputParam = JsonObject()
-                inputParam.addProperty(Constant.REQUEST_PRODUCT_ID, productid)
+              //  inputParam.addProperty(Constant.REQUEST_PRODUCT_ID, productid)
                 _isViewLoading.postValue(true)
-                val apiResponse = repository.callProductDetails(inputParam)
+                //val apiResponse = repository.callProductDetails(inputParam)
                 _isViewLoading.postValue(false)
-                if (apiResponse.data.size > 0) {
+                /*if (apiResponse.data.size > 0) {
                     _productDetailsModel.postValue(apiResponse.data.get(0))
-
-                }
+                }*/
             } catch (e: ApiExceptions) {
                 _isViewLoading.postValue(false)
                 _onMessageError.postValue(e.message)

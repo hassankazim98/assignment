@@ -1,22 +1,23 @@
 package com.assignment.eshop.api
 
-import com.assignment.eshop.data.db.model.ProductListModel
-import com.google.gson.JsonObject
-
+import com.assignment.eshop.data.db.model.AllProductModel
+import com.assignment.eshop.data.db.model.Product
 import retrofit2.Response
-import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.Query
 
 /**
  * REST API access points
  */
 interface WebServiceInterface {
 
-    @GET("search.php?s")
-    suspend fun callProducts(): Response<ProductListModel>
+    @GET("/lookup.php")
+    suspend fun callSearchProducts(@Query("i") id:Int): Response<Product>
 
-    @GET("search.php?s")
-    suspend fun callSearch(@Body jsonObject: JsonObject): Response<ProductListModel>
+    @GET("latest.php")
+    suspend fun getMeals(): AllProductModel
+
+    //https://www.themealdb.com/api/json/v1/1/lookup.php?i=52977
+    //https://www.quotes.io/quotes?page=1
 
 }

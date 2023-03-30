@@ -58,24 +58,5 @@ class AppModule {
             .allowMainThreadQueries()
             .build()
 
-//    @Provides
-//    fun providesAppDatabase(context: Context): AppDatabase {
-//        val builder = Room.databaseBuilder(context, AppDatabase::class.java, "namaz.db")
-//            .createFromAsset("databases/namaz.db")
-////            .fallbackToDestructiveMigration()
-////            .addCallback(databaseCallback)
-////            .allowMainThreadQueries()
-//
-//        //Encrypt room database for security purpose.
-//        val factory = SupportFactory(SQLiteDatabase.getBytes("123".toCharArray()))
-//        builder.openHelperFactory(factory)
-//        builder.build()
-//        return builder.build()
-//    }
-
-    /*@Singleton
-    @Provides
-    fun provideNamazListDao(database: AppDatabase) = database.inwardDataDao()
-*/
 
 }

@@ -9,10 +9,12 @@ import com.assignment.eshop.data.db.model.ProductListModel
 import com.assignment.eshop.databinding.AdapterProductListBinding
 import com.assignment.eshop.lisner.HomeListner
 import com.assignment.eshop.BR
+import com.assignment.eshop.data.db.model.AllProductModel
+import com.assignment.eshop.data.db.model.Product
 
 class ProductListAdapter(
     private val context: Context,
-    private val dataList: List<ProductListModel>,
+    private val dataList: List<Product.Meal>,
     private val listner: HomeListner
 ) : RecyclerView.Adapter<ProductListAdapter.BindingViewHolder>() {
 
