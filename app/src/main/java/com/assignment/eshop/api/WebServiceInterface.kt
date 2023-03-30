@@ -11,7 +11,7 @@ import retrofit2.http.Query
  */
 interface WebServiceInterface {
 
-    @GET("/lookup.php")
+    @GET("lookup.php")
     suspend fun callSearchProducts(@Query("i") id:Int): Response<Product>
 
     @GET("latest.php")

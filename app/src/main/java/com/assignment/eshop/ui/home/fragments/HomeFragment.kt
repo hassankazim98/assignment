@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.assignment.eshop.MyApp
 import com.assignment.eshop.R
+import com.assignment.eshop.api.HttpsTrustManager
 import com.assignment.eshop.api.RetrofitHelper
 import com.assignment.eshop.api.WebServiceInterface
 import com.assignment.eshop.base.BaseBindingFragment
@@ -34,6 +35,8 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>(), HomeListner {
 
     private var navController: NavController? = null
 
+    private val httpsTrustManager = HttpsTrustManager()
+
     var strSearchData = ""
 
     override fun initializeBinding(binding: FragmentHomeBinding) {
@@ -48,13 +51,15 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>(), HomeListner {
         super.onViewCreated(view, savedInstanceState)
         navController = view.findNavController()
 
+        httpsTrustManager.allowAllSSL()
         val qouts = RetrofitHelper.getInstance().create(WebServiceInterface::class.java)
         val repository = HomeRepository(qouts)
-        viewModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(HomeViewModel::class.java)
+        viewModel =
+            ViewModelProvider(this, MainViewModelFactory(repository)).get(HomeViewModel::class.java)
 
         viewModel.products.observe(requireActivity(), Observer {
-            LogM.e("==> is data size "+it.meals.size.toString())
-            LogM.e("==> is data "+it.meals.toString())
+            LogM.e("==> is data size " + it.meals.size.toString())
+            LogM.e("==> is data " + it.meals.toString())
         })
     }
 
@@ -63,6 +68,7 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>(), HomeListner {
               HomeFragmentDirections.actionNavigationHomeToProductDetailsFragment(model.idMeal.toString())
           navController?.navigate(action)*/
     }
+
     fun openSearchScreen() {
         /*if (strSearchData.length > 0) {
             val action = HomeFragmentDirections.actionGlobalSearchFragment(strSearchData, Constant.kEY_FROM_SEARCH)
